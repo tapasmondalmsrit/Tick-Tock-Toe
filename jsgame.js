@@ -26,9 +26,20 @@ function getbox(no){
     return document.getElementById("r"+no).innerHTML;
 }
 function checkmove(a,b,c,m){
-    if(getbox(a)==m && getbox(b)==m && getbox(c)==m)
-       return true;
-    else return false;   
+    if(getbox(a)==m && getbox(b)==m && getbox(c)==m){
+        document.getElementById("r"+a).style.color = "green"
+        document.getElementById("r"+b).style.color = "green"
+        document.getElementById("r"+c).style.color = "green"
+        return true;
+    }
+
+    else
+    {
+        document.getElementById("r"+a).style.color = "white"
+        document.getElementById("r"+b).style.color = "white"
+        document.getElementById("r"+c).style.color = "white"
+        return false;   
+    } 
 }
 
 function playagain(){
